@@ -60,3 +60,7 @@ class DownloadController:
         Model().update_multiple_config("download", download_metadata)
         bvid = CheckFormat().only_bvid(vid)
         self.download_video(bvid)
+
+    def download_video(self, cid, name="video"):
+        self.bili_downloader.download_video(cid, name)
+        self.bili_downloader.download_cover(cid, name)
