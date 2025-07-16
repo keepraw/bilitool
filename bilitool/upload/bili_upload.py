@@ -269,7 +269,7 @@ class BiliUploader(object):
     def publish_video(self, bilibili_filename):
         """publish the uploaded video"""
         config = Model().get_config()
-        url = f'https://member.bilibili.com/x/vu/client/add?access_key={config["cookies"]["access_key"]}'
+        url = f'https://member.bilibili.com/x/vu/web/add?access_key={config["cookies"]["access_key"]}'
         data = {
             "copyright": config["upload"]["copyright"],
             "videos": [
